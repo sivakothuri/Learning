@@ -1,4 +1,4 @@
-package questions;
+package logic;
 
 public class MaxTwoNumbers {
 	public static void main(String[] args) {

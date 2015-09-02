@@ -1,4 +1,4 @@
-package questions;
+package logic;
 
 public class RemoveDuplicateCharecter {
 

@@ -1,4 +1,4 @@
-package questions;
+package logic;
 
 /**
  * You are given an array of integers (both positive and negative). Find the
