@@ -4,7 +4,7 @@ import java.util.Random;
 
 import org.junit.rules.ExternalResource;
 
-public class ContractRule extends ExternalResource {
+public class ExternalResourceRule extends ExternalResource {
 
 	Integer number = 0;
 

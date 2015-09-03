@@ -1,7 +1,5 @@
 package junit;
 
-import static org.junit.Assert.fail;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -12,12 +10,11 @@ import org.junit.Test;
 public class Junit1 {
 
 	@Rule
-	public ContractRule rule = new ContractRule();
+	public ExternalResourceRule rule = new ExternalResourceRule();
 	
 	@Test
 	public void test() {
 		System.out.println("Junit1.test() :" +rule.getRandomNumber());
-		fail("Not yet implemented");
 	}
 	
 	@Test
