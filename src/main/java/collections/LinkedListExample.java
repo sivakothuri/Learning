@@ -45,12 +45,12 @@ public class LinkedListExample {
      System.out.println("+---------------------------------------------------------------------+");
      System.out.println();
 
-     List listA = new LinkedList();
-     List listB = new LinkedList();
+     List<String> listA = new LinkedList<>();
+     List<String> listB = new LinkedList<>();
 
      for (int i = 0; i < MAX; i++) {
          System.out.println("  - Storing Integer(" + i + ")");
-         listA.add(new Integer(i));
+         listA.add(""+new Integer(i));
      }
 
      System.out.println("  - Storing String(Alex)");
@@ -71,7 +71,7 @@ public class LinkedListExample {
      System.out.println("+---------------------------------------------------------------------+");
      System.out.println();
 
-     Iterator i = listA.iterator();
+     Iterator<String> i = listA.iterator();
      while (i.hasNext()) {
          System.out.println(i.next());
      }
@@ -84,7 +84,7 @@ public class LinkedListExample {
      System.out.println();
 
      counter = 0;
-     ListIterator li = listA.listIterator();
+     ListIterator<String> li = listA.listIterator();
      while (li.hasNext()) {
          System.out.println("Element [" + counter + "] = " + li.next());
          System.out.println("  - hasPrevious    = " + li.hasPrevious());
@@ -133,7 +133,7 @@ public class LinkedListExample {
      System.out.println("+---------------------------------------------------------------------+");
      System.out.println();
 
-     List listSub = listA.subList(10, listA.size());
+     List<String> listSub = listA.subList(10, listA.size());
      System.out.println("New Sub-List from index 10 to " + listA.size() + ": " + listSub);
 
 
@@ -186,7 +186,7 @@ public class LinkedListExample {
      System.out.println();
      System.out.println("Are List's A and B equal? " + listA.equals(listB));
      System.out.println();
-     listB = new LinkedList(listA);
+     listB = new LinkedList<>(listA);
      System.out.println("List A   (after)  : " + listA);
      System.out.println("List B   (after)  : " + listB);
      System.out.println("Sub-List (after)  : " + listSub);
