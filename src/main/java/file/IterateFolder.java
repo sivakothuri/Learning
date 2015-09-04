@@ -11,15 +11,14 @@ import java.nio.file.attribute.BasicFileAttributes;
 public class IterateFolder {
 
 	public static void main(String[] args) throws IOException {
-		Path path = Paths
-				.get("//srv-ind-bcp3.vanenburg.com/ftproot/bcp-builds/PCL-Sans-PSL/build.21/ProcessComponentLibrary/packages");
+		Path path = Paths.get(".");
 		if (Files.isDirectory(path)) {
 
 			Files.walkFileTree(path, new SimpleFileVisitor<Path>() {
 				@Override
 				public FileVisitResult visitFile(Path file, BasicFileAttributes attr) {
 					if (attr.isRegularFile()) {
-						System.out.println(file.getFileName());
+						System.out.println(file.toAbsolutePath());
 					} else {
 						System.out.format("Other: %s ", file);
 					}
